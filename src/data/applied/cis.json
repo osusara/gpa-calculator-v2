@@ -1,0 +1,470 @@
+{
+  "id": "CIS",
+  "department": "Computing and Information Systems",
+  "years": [
+    {
+      "year": 1,
+      "semesters": [
+        {
+          "semester": 1,
+          "totalCreadits": 13,
+          "subjects": [
+            {
+              "id": "IS11201",
+              "subject": "Fundamentals of Information Systems",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS11302",
+              "subject": "Structured Programming Techniques",
+              "credits": 3,
+              "compulsory": true
+            },
+            {
+              "id": "IS11203",
+              "subject": "Information Systems Theory and Practice",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS11204",
+              "subject": "Information System Infrastructure",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS11205",
+              "subject": "Fundamentals of Mathematics",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS11206",
+              "subject": "Statistics & Probability Theory",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "CPE1101",
+              "subject": "Professional English I",
+              "credits": 0,
+              "compulsory": true
+            }
+          ]
+        },
+        {
+          "semester": 2,
+          "totalCreadits": 15,
+          "subjects": [
+            {
+              "id": "IS12307",
+              "subject": "Object Oriented Programming",
+              "credits": 3,
+              "compulsory": true
+            },
+            {
+              "id": "IS12308",
+              "subject": "Database Systems",
+              "credits": 3,
+              "compulsory": true
+            },
+            {
+              "id": "IS12209",
+              "subject": "Emerging Technologies for Information Systems",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS12210",
+              "subject": "Advanced Mathematics",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS12311",
+              "subject": "Analysis of Algorithms",
+              "credits": 3,
+              "compulsory": true
+            },
+            {
+              "id": "IS12212",
+              "subject": "Human Computer Interaction",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "CPE1201",
+              "subject": "Professional English II",
+              "credits": 0,
+              "compulsory": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "semesters": [
+        {
+          "semester": 1,
+          "totalCredits": 14,
+          "subjects": [
+            {
+              "id": "IS21213",
+              "subject": "Personal Productivity with IS technology",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS21214",
+              "subject": "Software Project Management",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS21215",
+              "subject": "Object Oriented Analysis and Design",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS21216",
+              "subject": "Platform Technologies",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS21217",
+              "subject": "System Analysis and Design",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS21218",
+              "subject": "Information Assurance and Security",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS21219",
+              "subject": "Social and Professional Issues",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "CPE2101",
+              "subject": "Professional English III",
+              "credits": 0,
+              "compulsory": true
+            }
+          ]
+        },
+        {
+          "semester": 2,
+          "totalCredits": 14,
+          "subjects": [
+            {
+              "id": "IS22220",
+              "subject": "System Administration and Maintenance",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS22221",
+              "subject": "Operating System Concepts",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS22222",
+              "subject": "System Integration and Architecture",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS22223",
+              "subject": "IS Risk Management",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS22224",
+              "subject": "IT Governance",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS22225",
+              "subject": "Business Intelligence",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS22226",
+              "subject": "Web Technologies",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "CPE2201",
+              "subject": "Professional English IV",
+              "credits": 0,
+              "compulsory": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 3,
+      "semesters": [
+        {
+          "semester": 1,
+          "totalCredits": 23,
+          "subjects": [
+            {
+              "id": "IS31227",
+              "subject": "Rapid Application Development",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS31228",
+              "subject": "Electronic Business Strategy, Architecture and Design",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS31129",
+              "subject": "Enterprise Architecture",
+              "credits": 1,
+              "compulsory": true
+            },
+            {
+              "id": "IS31230",
+              "subject": "Mini Project",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS31231",
+              "subject": "Management Information Systems",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS31232",
+              "subject": "IT Auditing",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS31233",
+              "subject": "Entrepreneurship and Innovation",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS31234",
+              "subject": "Software Engineering",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS31235",
+              "subject": "Data Communication and Networks",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS31236",
+              "subject": "Geographical Information Systems",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS31237",
+              "subject": "Advanced Database Systems",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS31238",
+              "subject": "Organizational Behavior and Management",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS31239",
+              "subject": "Agile Software Development",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS31240",
+              "subject": "Software Quality Assurance",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS31241",
+              "subject": "Design Patterns and Applications",
+              "credits": 2,
+              "compulsory": false
+            }
+          ]
+        },
+        {
+          "semester": 2,
+          "totalCredits": 8,
+          "subjects": [
+            {
+              "id": "IS32842",
+              "subject": "Industrial Training",
+              "credits": 8,
+              "compulsory": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 4,
+      "semesters": [
+        {
+          "semester": 1,
+          "totalCredits": 16,
+          "subjects": [
+            {
+              "id": "IS41243",
+              "subject": "Introduction to Distributed Systems",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS41244",
+              "subject": "Information Systems Strategies, Management & Acquisition",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS41245",
+              "subject": "Business Process Management",
+              "credits": 1,
+              "compulsory": true
+            },
+            {
+              "id": "IS41246",
+              "subject": "Enterprise Resource Planning",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS41247",
+              "subject": "Research Method",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS41248",
+              "subject": "Cloud Computing",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS41249",
+              "subject": "Logistics Systems and Transportation Management",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS41250",
+              "subject": "Human Resource Management",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS41251",
+              "subject": "Data Mining and Applications",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS41252",
+              "subject": "Multimedia and Hypermedia Systems Development",
+              "credits": 2,
+              "compulsory": false
+            }
+          ]
+        },
+        {
+          "semester": 2,
+          "totalCredits": 22,
+          "subjects": [
+            {
+              "id": "IS42853",
+              "subject": "Research Project in Information Systems",
+              "credits": 8,
+              "compulsory": true
+            },
+            {
+              "id": "IS42254",
+              "subject": "Business/IT Alignment",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS42255",
+              "subject": "Business Process Simulation",
+              "credits": 1,
+              "compulsory": true
+            },
+            {
+              "id": "IS42256",
+              "subject": "Information System Economics",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS42257",
+              "subject": "Enterprise Modeling Ontologies",
+              "credits": 2,
+              "compulsory": true
+            },
+            {
+              "id": "IS42258",
+              "subject": "Enterprise Architecture Framework",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS42259",
+              "subject": "Web Service Technologies",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS42260",
+              "subject": "Software Architecture",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS42261",
+              "subject": "Computer System Security",
+              "credits": 2,
+              "compulsory": false
+            },
+            {
+              "id": "IS42262",
+              "subject": "Mobile Computing",
+              "credits": 2,
+              "compulsory": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
