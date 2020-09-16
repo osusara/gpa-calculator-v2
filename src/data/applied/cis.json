@@ -8,6 +8,7 @@
         {
           "semester": 1,
           "totalCreadits": 13,
+          "electiveSubjectsNumber": 0,
           "subjects": [
             {
               "id": "IS11201",
@@ -56,6 +57,7 @@
         {
           "semester": 2,
           "totalCreadits": 15,
+          "electiveSubjectsNumber": 0,
           "subjects": [
             {
               "id": "IS12307",
@@ -109,6 +111,7 @@
         {
           "semester": 1,
           "totalCredits": 14,
+          "electiveSubjectsNumber": 0,
           "subjects": [
             {
               "id": "IS21213",
@@ -163,6 +166,7 @@
         {
           "semester": 2,
           "totalCredits": 14,
+          "electiveSubjectsNumber": 0,
           "subjects": [
             {
               "id": "IS22220",
@@ -222,6 +226,7 @@
         {
           "semester": 1,
           "totalCredits": 23,
+          "electiveSubjectsNumber": 5,
           "subjects": [
             {
               "id": "IS31227",
@@ -335,6 +340,7 @@
         {
           "semester": 1,
           "totalCredits": 16,
+          "electiveSubjectsNumber": 3,
           "subjects": [
             {
               "id": "IS41243",
@@ -351,7 +357,7 @@
             {
               "id": "IS41245",
               "subject": "Business Process Management",
-              "credits": 1,
+              "credits": 2,
               "compulsory": true
             },
             {
@@ -401,6 +407,7 @@
         {
           "semester": 2,
           "totalCredits": 22,
+          "electiveSubjectsNumber": 3,
           "subjects": [
             {
               "id": "IS42853",
@@ -417,7 +424,7 @@
             {
               "id": "IS42255",
               "subject": "Business Process Simulation",
-              "credits": 1,
+              "credits": 2,
               "compulsory": true
             },
             {

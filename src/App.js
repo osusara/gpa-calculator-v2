@@ -4,7 +4,7 @@ import "./App.css";
 
 import Layout from "./components/layout";
 import Home from "./components/home";
-import ResultSheet from "./components/resultSheet";
+import CISResultSheet from "./components/resultSheets/applied/cis";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/results">
-            <ResultSheet faculty="applied" department="cis" />
+            <CISResultSheet faculty="applied" department="cis" />
           </Route>
         </Switch>
       </Layout>
