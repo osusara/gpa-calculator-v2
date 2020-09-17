@@ -58,7 +58,7 @@ export const CompulsoryRows = ({
 export const ElectiveRow = ({
   electives,
   setElectives,
-  items: { subjects },
+  items: { subjects, electiveSubjectsIndex },
   number,
 }) => {
   const [selected, setSelected] = useState({
@@ -75,7 +75,8 @@ export const ElectiveRow = ({
     subjects.map((item) => {
       if (!item.compulsory) {
         let set = false;
-        for (let i = 1; i <= Object.keys(electives).length; i++) {
+
+        for (let i = 1; i <= electiveSubjectsIndex[1]; i++) {
           if (electives[i]) {
             if (item.id === electives[i].id) {
               set = true;
@@ -90,7 +91,7 @@ export const ElectiveRow = ({
     });
 
     setList(listData);
-  }, [electives, subjects]);
+  }, [electiveSubjectsIndex, electives, subjects]);
 
   const onSelect = (e) => {
     const data = list.filter((item) => item.id === e.target.value);
@@ -143,7 +144,9 @@ export const ElectiveRow = ({
             <option value={selected.id}>{selected.subject}</option>
           ) : null}
           {list.map((item) => (
-            <option key={item.id} value={item.id}>{item.subject}</option>
+            <option key={item.id} value={item.id}>
+              {item.subject}
+            </option>
           ))}
           <option value="IS312XX">NOT DECIDED YET!</option>
         </Form.Control>

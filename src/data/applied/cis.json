@@ -7,8 +7,8 @@
       "semesters": [
         {
           "semester": 1,
-          "totalCreadits": 13,
-          "electiveSubjectsNumber": 0,
+          "totalCredits": 13,
+          "electiveSubjectsIndex": [0,11],
           "subjects": [
             {
               "id": "IS11201",
@@ -56,8 +56,8 @@
         },
         {
           "semester": 2,
-          "totalCreadits": 15,
-          "electiveSubjectsNumber": 0,
+          "totalCredits": 15,
+          "electiveSubjectsIndex": [0, 11],
           "subjects": [
             {
               "id": "IS12307",
@@ -111,7 +111,7 @@
         {
           "semester": 1,
           "totalCredits": 14,
-          "electiveSubjectsNumber": 0,
+          "electiveSubjectsIndex": [0, 11],
           "subjects": [
             {
               "id": "IS21213",
@@ -166,7 +166,7 @@
         {
           "semester": 2,
           "totalCredits": 14,
-          "electiveSubjectsNumber": 0,
+          "electiveSubjectsIndex": [0, 11],
           "subjects": [
             {
               "id": "IS22220",
@@ -226,7 +226,7 @@
         {
           "semester": 1,
           "totalCredits": 23,
-          "electiveSubjectsNumber": 5,
+          "electiveSubjectsIndex": [5, 11],
           "subjects": [
             {
               "id": "IS31227",
@@ -323,6 +323,7 @@
         {
           "semester": 2,
           "totalCredits": 8,
+          "electiveSubjectsIndex": [0, 11],
           "subjects": [
             {
               "id": "IS32842",
@@ -340,7 +341,7 @@
         {
           "semester": 1,
           "totalCredits": 16,
-          "electiveSubjectsNumber": 3,
+          "electiveSubjectsIndex": [3, 11],
           "subjects": [
             {
               "id": "IS41243",
@@ -407,7 +408,7 @@
         {
           "semester": 2,
           "totalCredits": 22,
-          "electiveSubjectsNumber": 3,
+          "electiveSubjectsIndex": [3, 11],
           "subjects": [
             {
               "id": "IS42853",

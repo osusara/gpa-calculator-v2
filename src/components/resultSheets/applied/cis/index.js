@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { getData } from "../../../../data";
 import Sheet from "./sheet";
 
-const CISResultSheet = ({ faculty, department }) => {
+const CISResultSheet = ({ faculty, department, gpa, setGpa }) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const CISResultSheet = ({ faculty, department }) => {
   return (
     <Container fluid={true}>
       <h1>Results Sheet</h1>
-      {data ? <Sheet data={data} /> : "Loading..."}
+      {data ? <Sheet data={data} gpa={gpa} setGpa={setGpa} /> : "Loading..."}
     </Container>
   );
 };
