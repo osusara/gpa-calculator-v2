@@ -41,13 +41,8 @@ const Sheet = ({ data }) => {
                     <CompulsoryRows
                       results={results}
                       setResults={setResults}
-                      items={data.years[0].semesters[0].subjects}
+                      items={data.years[0].semesters[0]}
                     />
-                    {/* <CompulsoryRow
-                      results={results}
-                      setResults={setResults}
-                      item={data.years[0].semesters[0].subjects[6]}
-                    /> */}
                   </tbody>
                 </Table>
               </Card.Body>
@@ -65,7 +60,7 @@ const Sheet = ({ data }) => {
                     <CompulsoryRows
                       results={results}
                       setResults={setResults}
-                      items={data.years[0].semesters[1].subjects}
+                      items={data.years[0].semesters[1]}
                     />
                   </tbody>
                 </Table>
@@ -86,7 +81,7 @@ const Sheet = ({ data }) => {
                     <CompulsoryRows
                       results={results}
                       setResults={setResults}
-                      items={data.years[1].semesters[0].subjects}
+                      items={data.years[1].semesters[0]}
                     />
                   </tbody>
                 </Table>
@@ -105,7 +100,7 @@ const Sheet = ({ data }) => {
                     <CompulsoryRows
                       results={results}
                       setResults={setResults}
-                      items={data.years[1].semesters[1].subjects}
+                      items={data.years[1].semesters[1]}
                     />
                   </tbody>
                 </Table>
@@ -126,7 +121,7 @@ const Sheet = ({ data }) => {
                     <CompulsoryRows
                       results={results}
                       setResults={setResults}
-                      items={data.years[2].semesters[0].subjects}
+                      items={data.years[2].semesters[0]}
                     />
 
                     <ElectiveRow
@@ -176,7 +171,7 @@ const Sheet = ({ data }) => {
                     <CompulsoryRows
                       results={results}
                       setResults={setResults}
-                      items={data.years[2].semesters[1].subjects}
+                      items={data.years[2].semesters[1]}
                     />
                   </tbody>
                 </Table>
@@ -197,25 +192,25 @@ const Sheet = ({ data }) => {
                     <CompulsoryRows
                       results={results}
                       setResults={setResults}
-                      items={data.years[3].semesters[0].subjects}
+                      items={data.years[3].semesters[0]}
                     />
                     <ElectiveRow
                       electives={electives}
                       setElectives={setElectives}
                       items={data.years[3].semesters[0]}
-                      number={1}
+                      number={6}
                     />
                     <ElectiveRow
                       electives={electives}
                       setElectives={setElectives}
                       items={data.years[3].semesters[0]}
-                      number={2}
+                      number={7}
                     />
                     <ElectiveRow
                       electives={electives}
                       setElectives={setElectives}
                       items={data.years[3].semesters[0]}
-                      number={3}
+                      number={8}
                     />
                   </tbody>
                 </Table>
@@ -234,25 +229,25 @@ const Sheet = ({ data }) => {
                     <CompulsoryRows
                       results={results}
                       setResults={setResults}
-                      items={data.years[3].semesters[1].subjects}
+                      items={data.years[3].semesters[1]}
                     />
                     <ElectiveRow
                       electives={electives}
                       setElectives={setElectives}
                       items={data.years[3].semesters[1]}
-                      number={1}
+                      number={9}
                     />
                     <ElectiveRow
                       electives={electives}
                       setElectives={setElectives}
                       items={data.years[3].semesters[1]}
-                      number={2}
+                      number={10}
                     />
                     <ElectiveRow
                       electives={electives}
                       setElectives={setElectives}
                       items={data.years[3].semesters[1]}
-                      number={3}
+                      number={11}
                     />
                   </tbody>
                 </Table>

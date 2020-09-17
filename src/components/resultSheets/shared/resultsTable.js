@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 
 export const TableTopic = ({ year, semester }) => {
@@ -22,8 +22,12 @@ export const TableHead = () => {
   );
 };
 
-export const CompulsoryRows = ({ results, setResults, items }) => {
-  return items.map((item) =>
+export const CompulsoryRows = ({
+  results,
+  setResults,
+  items: { subjects },
+}) => {
+  return subjects.map((item) =>
     item.compulsory ? (
       <tr key={item.id}>
         <td>{item.id}</td>
@@ -54,7 +58,7 @@ export const CompulsoryRows = ({ results, setResults, items }) => {
 export const ElectiveRow = ({
   electives,
   setElectives,
-  items: { subjects, electiveSubjectsNumber },
+  items: { subjects },
   number,
 }) => {
   const [selected, setSelected] = useState({
@@ -63,8 +67,33 @@ export const ElectiveRow = ({
     credits: 0,
   });
 
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    const listData = [];
+    // eslint-disable-next-line array-callback-return
+    subjects.map((item) => {
+      if (!item.compulsory) {
+        let set = false;
+        for (let i = 1; i <= Object.keys(electives).length; i++) {
+          if (electives[i]) {
+            if (item.id === electives[i].id) {
+              set = true;
+            }
+          }
+        }
+
+        if (!set) {
+          listData.push(item);
+        }
+      }
+    });
+
+    setList(listData);
+  }, [electives, subjects]);
+
   const onSelect = (e) => {
-    const data = subjects.filter((item) => item.id === e.target.value);
+    const data = list.filter((item) => item.id === e.target.value);
 
     if (data[0]) {
       setSelected({
@@ -108,13 +137,14 @@ export const ElectiveRow = ({
           <option value="IS312XX" hidden>
             Select The Elective Subject {number}
           </option>
-          {subjects.map((item) =>
-            !item.compulsory ? (
-              <option value={item.id}>{item.subject}</option>
-            ) : (
-              ""
-            )
-          )}
+          {selected &&
+          electives[number] &&
+          electives[number].id === selected.id ? (
+            <option value={selected.id}>{selected.subject}</option>
+          ) : null}
+          {list.map((item) => (
+            <option key={item.id} value={item.id}>{item.subject}</option>
+          ))}
           <option value="IS312XX">NOT DECIDED YET!</option>
         </Form.Control>
       </td>
