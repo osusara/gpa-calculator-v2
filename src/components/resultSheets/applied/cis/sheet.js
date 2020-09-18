@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -15,56 +15,26 @@ import {
   CompulsoryRows,
   ElectiveRow,
 } from "../../shared/resultsTable";
-import { semesterTotalGrade, yearlyGPA, fullGPA } from "../../shared/utils";
+import {
+  subjectsFilter,
+  resultsSubmitHandler,
+} from "../../shared/utils";
 
-const Sheet = ({ data, gpa, setGpa }) => {
+const Sheet = ({ data, setGpa, values, authId, addResults }) => {
   const [results, setResults] = useState({});
   const [electives, setElectives] = useState({});
 
+  useEffect(() => {
+    const filterdData = subjectsFilter(data, values);
+    if(filterdData) {
+      setResults(filterdData.compulsory);
+      setElectives(filterdData.elective);
+    }
+  }, [data, values]);
+
   const onSubmit = (e) => {
     e.preventDefault();
-    let resultsSet = results;
-
-    for (
-      let i = 1;
-      i <= data.years[0].semesters[0].electiveSubjectsIndex[1];
-      i++
-    ) {
-      if (electives[i]) {
-        resultsSet = {
-          ...resultsSet,
-          [electives[i].id]: {
-            result: electives[i].result,
-            credits: electives[i].credits,
-          },
-        };
-      }
-    }
-
-    const yearlyTotalGrades = [
-      semesterTotalGrade(data.years[0].semesters[0], resultsSet) +
-        semesterTotalGrade(data.years[0].semesters[1], resultsSet),
-      semesterTotalGrade(data.years[1].semesters[0], resultsSet) +
-        semesterTotalGrade(data.years[1].semesters[1], resultsSet),
-      semesterTotalGrade(data.years[2].semesters[0], resultsSet) +
-        semesterTotalGrade(data.years[2].semesters[1], resultsSet),
-      semesterTotalGrade(data.years[3].semesters[0], resultsSet) +
-        semesterTotalGrade(data.years[3].semesters[1], resultsSet),
-    ];
-
-    const year1GPA = yearlyGPA(yearlyTotalGrades[0], data.years[0]);
-    const year2GPA = yearlyGPA(yearlyTotalGrades[1], data.years[1]);
-    const year3GPA = yearlyGPA(yearlyTotalGrades[2], data.years[2]);
-    const year4GPA = yearlyGPA(yearlyTotalGrades[3], data.years[3]);
-
-    const yearlyTotalGPAs = [year1GPA, year2GPA, year3GPA, year4GPA];
-
-    const totalGPA = fullGPA(yearlyTotalGrades, yearlyTotalGPAs).toFixed(4);
-
-    setGpa({
-      totalGPA,
-      yearlyTotalGPAs,
-    });
+    resultsSubmitHandler(data, results, electives, authId);
   };
 
   return (
