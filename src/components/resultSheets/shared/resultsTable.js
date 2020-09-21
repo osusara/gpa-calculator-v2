@@ -93,11 +93,15 @@ export const ElectiveRow = ({
     setList(listData);
 
     if (electives && electives[number]) {
-      setSelected({
-        id: electives[number].id,
-        subject: subjects.filter((item) => item.id === electives[number].id)[0].subject,
-        credits: electives[number].credits,
-      });
+      if (subjects.filter((item) => item.id === electives[number].id)[0]) {
+        setSelected({
+          id: electives[number].id,
+          subject: subjects.filter(
+            (item) => item.id === electives[number].id
+          )[0].subject,
+          credits: electives[number].credits,
+        });
+      }
     }
   }, [electiveSubjectsIndex, electives, number, subjects]);
 

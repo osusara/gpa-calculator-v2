@@ -1,7 +1,10 @@
 .card {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
   height: 100%;
+  border-radius: 0;
+}
+
+.btn {
+  border-radius: 0;
 }
 
 .topic {
@@ -41,22 +44,8 @@
   text-align: center;
 }
 
-.btn {
-  width: 150px;
-  margin: 0 4px;
-  background-color: #ee3030;
-  color: #ffffff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  border: none;
-}
-
 .container .btn-back {
   background-color: #ffffff;
-  color: #000000;
-}
-
-.btn:hover {
-  background-color: #ffd363;
   color: #000000;
 }
 

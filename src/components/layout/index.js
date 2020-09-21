@@ -5,10 +5,10 @@ import "./style.css";
 import Header from "./header";
 import Footer from "./footer";
 
-function Layout({ children }) {
+function Layout({ children, logout }) {
   return (
     <>
-      <Header />
+      <Header logout={logout} />
       <Container fluid={true} className="main mt-5 mb-3">
         <main>{children}</main>
       </Container>

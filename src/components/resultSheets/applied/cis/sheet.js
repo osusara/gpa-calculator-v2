@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Container,
   Row,
@@ -20,17 +20,9 @@ import {
   resultsSubmitHandler,
 } from "../../shared/utils";
 
-const Sheet = ({ data, setGpa, values, authId, addResults }) => {
-  const [results, setResults] = useState({});
-  const [electives, setElectives] = useState({});
-
-  useEffect(() => {
-    const filterdData = subjectsFilter(data, values);
-    if(filterdData) {
-      setResults(filterdData.compulsory);
-      setElectives(filterdData.elective);
-    }
-  }, [data, values]);
+const Sheet = ({ data, values, authId }) => {
+  const [results, setResults] = useState(subjectsFilter(data, values).compulsory);
+  const [electives, setElectives] = useState(subjectsFilter(data, values).elective);
 
   const onSubmit = (e) => {
     e.preventDefault();

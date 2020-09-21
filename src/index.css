@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+select {
+   -o-appearance: none;
+   -ms-appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}

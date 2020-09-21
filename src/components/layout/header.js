@@ -1,11 +1,11 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ logout }) {
   return (
     <Navbar expand="lg" className="container navbar-light navbar-fix">
-      <Navbar.Brand href="#" className="brand-link">
+      <Navbar.Brand href="/" className="brand-link">
         SUSL GPA Calculator
       </Navbar.Brand>
 
@@ -15,9 +15,13 @@ function Header() {
           <Link to="/" className="nav-link">
             Home
           </Link>
-          <Link to="/results" className="nav-link">
-            Result Sheet
+          <Link to="/sheet" className="nav-link">
+            Results Sheet
           </Link>
+          <Link to="/me" className="nav-link">
+            Edit Profile
+          </Link>
+          <Button onClick={() => logout()}>Logout</Button>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

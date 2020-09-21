@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 
+import { auth } from "../../firebase";
 import Login from "./Login";
 import Registr from "./Register";
 import ErrorPage from "./ErrorPage";
 
-const Auth = ({ auth, authId }) => {
+const Auth = ({ authId }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState(null);
 

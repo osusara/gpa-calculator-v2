@@ -1,71 +1,76 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { auth } from "./firebase";
 import "./App.css";
 
-import { getResults } from "./services/db";
+import { getResults, getUser } from "./services/db";
+import { authCheck, authOut } from "./services/auth";
+import uniData from "./data/uniData.json";
 import Layout from "./components/layout";
-import Home from "./components/home";
 import Auth from "./components/auth";
-import CISResultSheet from "./components/resultSheets/applied/cis";
+import Home from "./components/home";
+import UserForm from "./components/user/form";
+import ResultSheet from "./components/resultSheets/applied/cis";
 
 function App() {
+  const [loading, setLoading] = useState(true);
   const [authId, setAuthId] = useState(null);
-  const [values, setValues] = useState({});
-  const [gpa, setGpa] = useState({
-    totalGPA: 0,
-    yearlyTotalGPAs: [],
-  });
+  const [user, setUser] = useState(null);
+  const [universityData, setUniversityData] = useState(null);
+  const [values, setValues] = useState(null);
+  const [gpa, setGpa] = useState(null);
 
-  const authCheck = () => {
-    auth.onAuthStateChanged(function (user) {
-      if (user) {
-        const authId = user.uid;
-        setAuthId(authId);
-      } else {
-        setAuthId(null);
-      }
-    });
-  };
-
-  const logout = () => {
-    auth
-      .signOut()
-      .then(function () {
-        setAuthId(null);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
+  const logout = () => authOut(setAuthId);
 
   useEffect(() => {
-    authCheck();
-    if(authId) {
+    authCheck(setAuthId);
+    if (authId) {
       getResults(authId, setValues, setGpa);
+      getUser(authId, setUser);
     }
-  }, [authId]);
+
+    setUniversityData(uniData);
+
+    if (authId && user && universityData && values && gpa) {
+      setLoading(false);
+    }
+  }, [authId, gpa, universityData, user, values]);
 
   return (
     <Router>
       <Layout className="m-4" logout={logout}>
-        <Switch>
-          <Route exact path="/">
-            <Home authId={authId} gpa={gpa} />
-          </Route>
-          <Route exact path="/auth">
-            <Auth auth={auth} authId={authId} />
-          </Route>
-          <Route exact path="/results">
-            <CISResultSheet
-              authId={authId}
-              faculty="applied"
-              department="cis"
-              setGpa={setGpa}
-              values={values}
-            />
-          </Route>
-        </Switch>
+        {loading ? (
+          <p className="text-center">Loading...</p>
+        ) : (
+          <Switch>
+            <Route exact path="/auth">
+              <Auth authId={authId} />
+            </Route>
+            <Route exact path="/">
+              <Home
+                authId={authId}
+                user={user}
+                gpa={gpa}
+                uniData={universityData}
+              />
+            </Route>
+            <Route exact path="/me">
+              <UserForm
+                authId={authId}
+                user={user}
+                uniData={universityData}
+                setUser={setUser}
+              />
+            </Route>
+            <Route exact path="/sheet">
+              <ResultSheet
+                authId={authId}
+                faculty={user.faculty}
+                department={user.department}
+                values={values}
+              />
+            </Route>
+          </Switch>
+        )}
       </Layout>
     </Router>
   );

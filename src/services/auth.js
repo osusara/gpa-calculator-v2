@@ -11,7 +11,7 @@ export const authCheck = (setAuthId) => {
   });
 };
 
-export const logout = (setAuthId) => {
+export const authOut = (setAuthId) => {
   auth
     .signOut()
     .then(function () {

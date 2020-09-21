@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-const Home = ({ user, uniData, authId, gpa }) => {
+const User = ({ user, uniData, authId, gpa }) => {
   const [faculty, setFaculty] = useState("");
   const [department, setDepartment] = useState("");
 
@@ -97,4 +97,4 @@ const Home = ({ user, uniData, authId, gpa }) => {
   );
 };
 
-export default Home;
+export default User;

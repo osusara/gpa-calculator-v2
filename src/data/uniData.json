@@ -1,0 +1,66 @@
+{
+  "id": "susl",
+  "university": "Sabaragamuwa University of Sri Lanka",
+  "faculties": [
+    {
+      "id": "agri",
+      "name": "Agricultural Sciences",
+      "departments": []
+    },
+    {
+      "id": "applied",
+      "name": "Applied Sciences",
+      "departments": [
+        {
+          "id": "cis",
+          "name": "Computing and Information Systems"
+        },
+        {
+          "id": "fst",
+          "name": "Food Science and Technology"
+        },
+        {
+          "id": "nr",
+          "name": "Natural Resources"
+        },
+        {
+          "id": "pst",
+          "name": "Physical Sciences and Technology"
+        },
+        {
+          "id": "pe",
+          "name": "Physical Education"
+        },
+        {
+          "id": "sm",
+          "name": "Sports Management"
+        }
+      ]
+    },
+    {
+      "id": "geo",
+      "name": "Geomatics",
+      "departments": []
+    },
+    {
+      "id": "management",
+      "name": "Management Studies",
+      "departments": []
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "departments": []
+    },
+    {
+      "id": "social",
+      "name": "Social Sciences & Languages",
+      "departments": []
+    },
+    {
+      "id": "tech",
+      "name": "Technology",
+      "departments": []
+    }
+  ]
+}

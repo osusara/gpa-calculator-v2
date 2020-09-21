@@ -186,4 +186,5 @@ export const resultsSubmitHandler = (data, results, electives, authId) => {
   };
 
   addResults(dataSet, authId);
+  // return(dataSet);
 };

@@ -1,3 +1,4 @@
+import uniData from "./uniData.json"; 
 import applied from "./applied";
 // import agri from "./agri";
 // import geo from "./geo";
@@ -6,7 +7,7 @@ import applied from "./applied";
 // import social from "./social";
 // import tech from "./tech";
 
-export const getData = (faculty, department) => {
+export const getSubjectData = (faculty, department) => {
   let payload = null;
   
   switch (faculty) {
@@ -36,4 +37,8 @@ export const getData = (faculty, department) => {
   }
 
   return payload;
+}
+
+export const getUniversityData = () => {
+  return uniData;
 }
